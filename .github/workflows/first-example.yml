@@ -3,17 +3,18 @@ name: My first WF
 on: push
 
 jobs:
-    first-job:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Welcome message
-          run: echo "My first Job"
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome message
+        run: echo "My first Job"
 
-        - name: List Files
-          run: ls 
+      - name: List Files
+        run: ls -al
           
-        - name: Read files
-          run: cat README.md  
+      - name: Read files
+        run: cat README.md || echo "README.md not found"
+
 
 
 
