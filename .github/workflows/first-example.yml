@@ -10,10 +10,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Welcome message
-        run: echo "My first Job"
+        run: |
+             echo "My first Job"
+             ls  al
+             cat README.md
 
-      - name: List Files
-        run: ls -al
+      - name: Generate ASCII ART WORK
+        run: comsay  -f dragon "Run for cover, I am a dragon RAWR" >>  dragon.txt         
 
-      - name: Read files
-        run: cat README.md
+
+
+      #- name: List Files
+      #  run: ls -al
+
+      #- name: Read files
+      #  run: cat README.md
