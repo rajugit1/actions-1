@@ -12,7 +12,7 @@ jobs:
       - name: Welcome message
         run: |
              echo "My first Job"
-             ls  al
+             ls  -al
              cat README.md
 
       - name: Generate ASCII ART WORK
