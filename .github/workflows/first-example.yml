@@ -1,30 +1,16 @@
-name: My first WF
+name: My First Workflow
 
 on: push
 
 jobs:
-  first-job:
+  first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Welcome Message
+        run: echo "My First Github actions job"
 
-      - name: Welcome message
-        run: |
-             echo "My first Job"
-             ls  -al
-             cat README.md
+      - name: List Files
+        run: echo ls
 
-      - name: Install cowsay
-        run: sudo apt-get update && sudo apt-get install -y cowsay
-      
-      - name: Generate ASCII ART WORK
-        run: cowsay  -f dragon "Run for cover, I am a dragon RAWR" >>  dragon.txt         
-
-
-
-      #- name: List Files
-      #  run: ls -al
-
-      #- name: Read files
-      #  run: cat README.md
+      - name: Read
+        run: cat README.md  
